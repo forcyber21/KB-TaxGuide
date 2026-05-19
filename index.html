@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>KB 세법가이드 2026</title>
+    <title>보험과 세법 상담 가이드 2026 | 프리미엄</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -15,220 +15,276 @@
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900 pb-32">
+<body class="bg-gray-50 text-gray-900 pb-36">
 
-    <header class="sticky top-0 z-50 bg-white border-b border-gray-100 px-4 py-3 flex items-center justify-between shadow-sm">
+    <header class="sticky top-0 z-50 bg-white border-b border-gray-100 px-4 py-3.5 flex items-center justify-between shadow-sm">
         <div class="flex items-center gap-2">
-            <div class="bg-yellow-400 text-gray-900 font-bold px-2 py-1 rounded text-xs tracking-wider">KB</div>
-            <h1 class="text-lg font-bold text-gray-800 tracking-tight">세법가이드 <span class="text-sm font-medium text-gray-400">2026 v1.0</span></h1>
+            <div class="bg-amber-500 text-white font-black px-2 py-0.5 rounded text-xs tracking-wider">KB</div>
+            <h1 class="text-base font-bold text-gray-800 tracking-tight">보험과 세법 상담 가이드 <span class="text-xs font-semibold text-amber-500">2026 프리미엄</span></h1>
         </div>
-        <button onclick="window.location.reload()" class="p-2 text-gray-500 hover:text-gray-800 transition">
-            <i data-lucide="rotate-ccw" class="w-5 h-5"></i>
+        <button onclick="window.location.reload()" class="p-2 text-gray-400 hover:text-gray-700 transition">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
         </button>
     </header>
 
-    <nav class="sticky top-[53px] z-40 bg-white border-b border-gray-200 flex justify-around text-center text-sm font-medium text-gray-500">
-        <button onclick="switchTab('all')" id="tab-btn-all" class="flex-1 py-3 text-yellow-600 border-b-2 border-yellow-500 font-semibold flex flex-col items-center gap-1">
+    <nav class="sticky top-[53px] z-40 bg-white border-b border-gray-200 flex justify-around text-center text-xs font-bold text-gray-400">
+        <button onclick="switchTab('all')" id="tab-btn-all" class="flex-1 py-3.5 text-amber-500 border-b-2 border-amber-500 flex flex-col items-center gap-1">
             <i data-lucide="layout-grid" class="w-4 h-4"></i>전체보기
         </button>
-        <button onclick="switchTab('calc')" id="tab-btn-calc" class="flex-1 py-3 hover:text-gray-800 flex flex-col items-center gap-1">
+        <button onclick="switchTab('calc')" id="tab-btn-calc" class="flex-1 py-3.5 flex flex-col items-center gap-1">
             <i data-lucide="calculator" class="w-4 h-4"></i>스마트 계산기
         </button>
-        <button onclick="switchTab('core')" id="tab-btn-core" class="flex-1 py-3 hover:text-gray-800 flex flex-col items-center gap-1">
+        <button onclick="switchTab('core')" id="tab-btn-core" class="flex-1 py-3.5 flex flex-col items-center gap-1">
             <i data-lucide="file-text" class="w-4 h-4"></i>핵심 본문
         </button>
-        <button onclick="switchTab('qna')" id="tab-btn-qna" class="flex-1 py-3 hover:text-gray-800 flex flex-col items-center gap-1">
+        <button onclick="switchTab('qna')" id="tab-btn-qna" class="flex-1 py-3.5 flex flex-col items-center gap-1">
             <i data-lucide="help-circle" class="w-4 h-4"></i>Q&A 탐색
+        </button>
+        <button onclick="switchTab('cases')" id="tab-btn-cases" class="flex-1 py-3.5 flex flex-col items-center gap-1">
+            <i data-lucide="bar-chart-3" class="w-4 h-4"></i>실전 사례
         </button>
     </nav>
 
-    <main class="max-w-md mx-auto px-4 mt-6">
+    <main class="max-w-md mx-auto px-4 mt-5">
 
         <div id="tab-all" class="tab-content active space-y-6">
             <section>
-                <h2 class="text-sm font-semibold text-gray-400 mb-3 flex items-center gap-1"><i data-lucide="compass" class="w-4 h-4"></i>주제별 대시보드</h2>
+                <h2 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-1"><i data-lucide="compass" class="w-3.5 h-3.5"></i>주제별 탐색 빠른 링크</h2>
                 <div class="grid grid-cols-2 gap-3">
-                    <div onclick="switchTab('calc')" class="bg-gradient-to-br from-yellow-400 to-amber-500 p-4 rounded-2xl shadow-sm cursor-pointer transform active:scale-95 transition text-white">
-                        <i data-lucide="calculator" class="w-8 h-8 mb-2 opacity-90"></i>
-                        <p class="font-bold text-base">스마트 계산기</p>
-                        <p class="text-xs opacity-80 mt-1">상속·증여·양도세 시뮬레이션</p>
+                    <div onclick="switchTab('calc')" class="bg-gradient-to-br from-amber-400 to-amber-500 p-4 rounded-2xl shadow-sm cursor-pointer transform active:scale-95 transition text-white">
+                        <i data-lucide="calculator" class="w-7 h-7 mb-2 opacity-90"></i>
+                        <p class="font-bold text-sm">스마트 세금 계산기</p>
+                        <p class="text-[10px] opacity-75 mt-0.5">상속·증여세 모의 산출</p>
                     </div>
-                    <div onclick="switchTab('core')" class="bg-gradient-to-br from-slate-700 to-slate-900 p-4 rounded-2xl shadow-sm cursor-pointer transform active:scale-95 transition text-white">
-                        <i data-lucide="sparkles" class="w-8 h-8 mb-2 text-yellow-400"></i>
-                        <p class="font-bold text-base">2026 핵심 세법</p>
-                        <p class="text-xs opacity-80 mt-1">개정 세법 및 절세 포인트</p>
+                    <div onclick="switchTab('core')" class="bg-gradient-to-br from-slate-800 to-slate-900 p-4 rounded-2xl shadow-sm cursor-pointer transform active:scale-95 transition text-white">
+                        <i data-lucide="sparkles" class="w-7 h-7 mb-2 text-amber-400"></i>
+                        <p class="font-bold text-sm">2026 개정 세법 개요</p>
+                        <p class="text-[10px] opacity-75 mt-0.5">핵심 공제 및 감면 한도</p>
                     </div>
                 </div>
             </section>
 
-            <section class="space-y-3">
-                <h3 class="text-sm font-semibold text-gray-400 flex items-center gap-1"><i data-lucide="list-video" class="w-4 h-4"></i>실전 상담 가이드 리스트</h3>
+            <section class="space-y-2.5">
+                <h2 class="text-xs font-bold text-gray-400 uppercase tracking-wider flex items-center gap-1"><i data-lucide="layers" class="w-3.5 h-3.5"></i>상담 매뉴얼 전체 리스트</h2>
                 
-                <div onclick="openDocument('상속세 및 증여세 핵심 요약', '2026년 개정된 상속·증여세 면제 한도와 공제 범위에 대한 핵심 내용입니다. 자녀 증여 시 비과세 한도와 세대생략 증여 절세 전략을 수록하고 있습니다.')" class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex items-center justify-between cursor-pointer hover:border-yellow-400 transition">
-                    <div class="space-y-1">
-                        <span class="bg-red-50 text-red-600 text-[10px] font-bold px-2 py-0.5 rounded-full">추천</span>
-                        <h4 class="font-bold text-gray-800 text-sm">상속세 및 증여세 핵심 요약</h4>
-                        <p class="text-xs text-gray-500">자녀 증여 한도 및 면제 범위 완벽 정리</p>
+                <div onclick="switchTab('core')" class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex items-center justify-between cursor-pointer hover:border-amber-400 transition">
+                    <div class="space-y-0.5">
+                        <span class="bg-red-50 text-red-600 text-[9px] font-bold px-1.5 py-0.5 rounded">필독</span>
+                        <h4 class="font-bold text-gray-800 text-sm">상속세 및 증여세법 개정 핵심</h4>
+                        <p class="text-xs text-gray-400">혼인·출산 통합 공제 한도 확대 세부 적용</p>
                     </div>
-                    <i data-lucide="chevron-right" class="w-5 h-5 text-gray-300"></i>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-gray-300"></i>
                 </div>
 
-                <div onclick="openDocument('종합소득세 및 금융소득 종합과세', '금융소득(이자, 배당)이 연 2,000만 원을 초과할 경우 적용되는 종합과세 기준과 건강보험료 부과 체계 연동 메커니즘을 상세히 다룹니다.')" class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex items-center justify-between cursor-pointer hover:border-yellow-400 transition">
-                    <div class="space-y-1">
-                        <span class="bg-blue-50 text-blue-600 text-[10px] font-bold px-2 py-0.5 rounded-full">자산가</span>
-                        <h4 class="font-bold text-gray-800 text-sm">금융소득 종합과세 절세 가이드</h4>
-                        <p class="text-xs text-gray-500">ISA 및 비과세 상품을 활용한 합산 과세 회피</p>
+                <div onclick="switchTab('qna')" class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex items-center justify-between cursor-pointer hover:border-amber-400 transition">
+                    <div class="space-y-0.5">
+                        <span class="bg-amber-50 text-amber-700 text-[9px] font-bold px-1.5 py-0.5 rounded">자산관리</span>
+                        <h4 class="font-bold text-gray-800 text-sm">CEO 플랜 및 법인 자산 상속 전략</h4>
+                        <p class="text-xs text-gray-400">가지급금 처리 및 경영권 승계 시 보험 활용</p>
                     </div>
-                    <i data-lucide="chevron-right" class="w-5 h-5 text-gray-300"></i>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-gray-300"></i>
+                </div>
+
+                <div onclick="switchTab('cases')" class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex items-center justify-between cursor-pointer hover:border-amber-400 transition">
+                    <div class="space-y-0.5">
+                        <span class="bg-blue-50 text-blue-600 text-[9px] font-bold px-1.5 py-0.5 rounded">실전</span>
+                        <h4 class="font-bold text-gray-800 text-sm">종신보험을 활용한 상속세 재원 마련 사례</h4>
+                        <p class="text-xs text-gray-400">부동산 자산가 양도세·상속세 리스크 방어</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-gray-300"></i>
                 </div>
             </section>
         </div>
 
         <div id="tab-calc" class="tab-content space-y-6">
             <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm space-y-4">
-                <div class="flex items-center gap-2 border-b border-gray-100 pb-3">
-                    <div class="p-2 bg-yellow-50 text-yellow-600 rounded-lg">
+                <div class="flex items-center gap-2 border-b border-gray-50 pb-3">
+                    <div class="p-2 bg-amber-50 text-amber-600 rounded-xl">
                         <i data-lucide="calculator" class="w-5 h-5"></i>
                     </div>
                     <div>
-                        <h3 class="font-bold text-gray-800">증여세 간이 계산기</h3>
-                        <p class="text-xs text-gray-400">증여가액에 따른 예상 세액을 산출합니다.</p>
+                        <h3 class="font-bold text-gray-800 text-sm">2026 증여세 자동 계산기</h3>
+                        <p class="text-xs text-gray-400">성인 자녀 기본공제(5,000만 원) 반영 시뮬레이션</p>
                     </div>
                 </div>
                 
-                <div class="space-y-2">
-                    <label class="text-xs font-semibold text-gray-500 block">증여재산가액 (원)</label>
-                    <input type="number" id="calc-input" placeholder="금액을 입력하세요 (예: 100000000)" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-yellow-500 transition">
+                <div class="space-y-1.5">
+                    <label class="text-xs font-bold text-gray-500">증여재산가액 입력 (원)</label>
+                    <input type="number" id="calc-input-main" placeholder="예: 150000000 (1억 5천만 원)" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500 transition">
                 </div>
 
-                <button onclick="calculateTax()" class="w-full bg-gray-900 text-white font-bold py-3.5 rounded-xl text-sm shadow-sm active:bg-gray-800 transition">계산하기</button>
+                <button onclick="runTaxEngine()" class="w-full bg-slate-900 text-white font-bold py-3 rounded-xl text-xs shadow-sm active:bg-slate-800 transition">세액 정밀 산출</button>
 
-                <div id="calc-result" class="hidden bg-gray-50 p-4 rounded-xl border border-gray-100 space-y-2">
+                <div id="calc-result-box" class="hidden bg-gray-50 p-4 rounded-xl border border-gray-100 space-y-2.5">
                     <div class="flex justify-between text-xs text-gray-500">
-                        <span>과세표준(기본공제 5천만원 가정):</span>
-                        <span id="res-base" class="font-medium text-gray-800">-</span>
+                        <span>증여재산공제 (성인자녀):</span>
+                        <span class="font-medium text-gray-800">50,000,000 원</span>
                     </div>
-                    <div class="flex justify-between text-sm font-bold text-gray-900 pt-1 border-t border-dashed border-gray-200">
-                        <span class="text-red-500">예상 사출세액:</span>
-                        <span id="res-tax">-</span>
+                    <div class="flex justify-between text-xs text-gray-500">
+                        <span>과세표준 금액:</span>
+                        <span id="txt-base" class="font-medium text-gray-800">-</span>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-500 border-b border-dashed border-gray-200 pb-2">
+                        <span>적용 세율 단계:</span>
+                        <span id="txt-rate" class="font-medium text-amber-600">-</span>
+                    </div>
+                    <div class="flex justify-between text-sm font-black text-gray-900 pt-1">
+                        <span class="text-red-500">최종 산출세액:</span>
+                        <span id="txt-total-tax">-</span>
                     </div>
                 </div>
             </div>
         </div>
 
         <div id="tab-core" class="tab-content space-y-4">
-            <h2 class="text-sm font-semibold text-gray-400 flex items-center gap-1"><i data-lucide="bookmark font-bold" class="w-4 h-4"></i>2026 주요 세법 개정 해설</h2>
+            <h2 class="text-xs font-bold text-gray-400 uppercase tracking-wider flex items-center gap-1"><i data-lucide="file-text" class="w-3.5 h-3.5"></i>2026년 보험 및 세무 가이드 가이드라인</h2>
+            
             <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-sm space-y-3">
-                <h3 class="font-bold text-base text-gray-800 border-l-4 border-yellow-500 pl-2">혼인·출산 증여재산 공제 신설</h3>
-                <p class="text-sm text-gray-600 leading-relaxed">
-                    혼인신고일 전후 2년 이내 또는 자녀의 출생일로부터 2년 이내에 직계존속으로부터 증여받는 재산은 기존 기본공제(5천만 원) 외에 **추가로 1억 원까지 공제**가 신설되었습니다. 양가 합산 시 최대 3억 원까지 비과세 증여가 가능해졌습니다.
+                <h3 class="font-bold text-sm text-gray-800 border-l-4 border-amber-500 pl-2">1. 혼인·출산 증여재산 공제 통합 적용</h3>
+                <p class="text-xs text-gray-600 leading-relaxed">
+                    2026년 기준 직계존속으로부터 증여받을 때, 기본공제 5천만 원에 더해 혼인신고일 전후 2년 또는 자녀 출생일로부터 2년 이내인 경우 **추가로 1억 원**을 공제받습니다. 신랑·신부 양가 지원을 합산하면 최대 3억 원까지 세금 없이 자산 이전이 가능합니다.
+                </p>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-sm space-y-3">
+                <h3 class="font-bold text-sm text-gray-800 border-l-4 border-amber-500 pl-2">2. 상속세 재원 마련과 계약자 관계 설정</h3>
+                <p class="text-xs text-gray-600 leading-relaxed">
+                    자산가의 사망 시 상속세는 전액 현금 납부가 원칙입니다. 이때 사망보험금을 상속세 재원으로 활용하려면 계약의 주체를 명확히 해야 합니다. **[계약자=수익자=소득이 있는 자녀]**, **[피보험자=부모(자산가)]**로 지정해야만 수령하는 사망보험금이 상속재산에 합산되지 않고 온전히 세금 납부에 활용될 수 있습니다.
                 </p>
             </div>
         </div>
 
         <div id="tab-qna" class="tab-content space-y-3">
-            <h2 class="text-sm font-semibold text-gray-400 mb-1 flex items-center gap-1"><i data-lucide="help-circle" class="w-4 h-4"></i>자주 묻는 세무 질문</h2>
+            <h2 class="text-xs font-bold text-gray-400 uppercase tracking-wider flex items-center gap-1"><i data-lucide="help-circle" class="w-3.5 h-3.5"></i>실무 빈출 현장 Q&A 매뉴얼</h2>
             
             <div class="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
-                <button onclick="toggleAccordion('q1')" class="w-full px-5 py-4 text-left font-bold text-sm text-gray-800 flex justify-between items-center bg-white hover:bg-gray-50 transition">
-                    <span>Q. 부모 자식 간 차용증을 쓰고 돈을 빌리면 증여세를 안 내나요?</span>
-                    <i id="icon-q1" data-lucide="chevron-down" class="w-4 h-4 text-gray-400 transition-transform"></i>
+                <button onclick="toggleBox('q1')" class="w-full px-4 py-3.5 text-left font-bold text-xs text-gray-800 flex justify-between items-center bg-white hover:bg-gray-50 transition">
+                    <span>Q1. 차용증 작성 시 이자를 안 주면 전액 증여세 대상인가요?</span>
+                    <i id="ico-q1" data-lucide="chevron-down" class="w-4 h-4 text-gray-400 transition-transform"></i>
                 </button>
-                <div id="ans-q1" class="hidden px-5 pb-4 text-xs text-gray-600 leading-relaxed bg-gray-50 border-t border-gray-50 pt-3">
-                    부모 자식 간이라도 적법한 차용증을 작성하고 실제로 이자(법정 이자율 4.6%)를 지급한 금융 거래 내역이 입증된다면 증여세 과세를 피할 수 있습니다. 단, 이자 지급 명세와 원금 상환 능력이 입증되어야 과세관청에서 인정을 받습니다.
+                <div id="ans-q1" class="hidden px-4 pb-4 text-xs text-gray-600 leading-relaxed bg-gray-50 border-t border-gray-50 pt-3">
+                    가족 간 거래라도 적정 이자율(연 4.6%)보다 낮거나 안 주면 세법상 이익 변제 의무가 발생합니다. 단, 법정 이자와의 차액이 연간 1,000만 원 미만(원금 약 2억 1,700만 원 이하)인 경우에는 이자를 지급하지 않더라도 증여세가 부과되지 않습니다.
                 </div>
+            </div>
+
+            <div class="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
+                <button onclick="toggleBox('q2')" class="w-full px-4 py-3.5 text-left font-bold text-xs text-gray-800 flex justify-between items-center bg-white hover:bg-gray-50 transition">
+                    <span>Q2. 보장성 보험료도 소득공제나 세액공제 한도가 어떻게 되나요?</span>
+                    <i id="ico-q2" data-lucide="chevron-down" class="w-4 h-4 text-gray-400 transition-transform"></i>
+                </button>
+                <div id="ans-q2" class="hidden px-4 pb-4 text-xs text-gray-600 leading-relaxed bg-gray-50 border-t border-gray-50 pt-3">
+                    근로소득자가 가입한 보장성 보험(종신, 암, 실비 등)은 연간 납입 금액 100만 원 한도 내에서 12%의 지방세 포함 세액공제(최대 12만 원 한도) 혜택을 제공받습니다.
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-cases" class="tab-content space-y-4">
+            <h2 class="text-xs font-bold text-gray-400 uppercase tracking-wider flex items-center gap-1"><i data-lucide="bar-chart-3" class="w-3.5 h-3.5"></i>자산가 포트폴리오 가치 분석 사례</h2>
+            
+            <div class="bg-white p-5 rounded-xl border border-gray-100 shadow-sm space-y-2.5">
+                <div class="flex items-center justify-between">
+                    <span class="text-[10px] font-bold bg-emerald-50 text-emerald-600 px-2 py-0.5 rounded">빌딩 자산가 A씨 (60대)</span>
+                    <span class="text-xs font-bold text-gray-500">총 자산 80억</span>
+                </div>
+                <h3 class="font-bold text-sm text-gray-900">부동산 비중 90% 보유 고객의 상속세 현금 유동성 리스크 해결</h3>
+                <p class="text-xs text-gray-600 leading-relaxed">
+                    상속 자산 중 부동산 비율이 절대적으로 높아 향후 자녀들의 상속세 납부를 위한 현금 흐름 확보가 비상인 상황이었습니다. 자녀 명의의 종신보험 계약을 체결(보험료는 자녀 합법 소득 증빙 유도)하여 사망 시 발생하는 15억 원의 보험금으로 건물을 급매 처분하지 않고 상속세를 완납한 솔루션 사례입니다.
+                </p>
             </div>
         </div>
 
     </main>
 
-    <div id="doc-modal" class="fixed inset-0 bg-black/50 z-50 flex items-end justify-center hidden opacity-0 transition-opacity duration-300">
-        <div class="bg-white w-full max-w-md rounded-t-2xl p-6 space-y-4 transform translate-y-full transition-transform duration-300">
-            <div class="flex justify-between items-start">
-                <h3 id="modal-title" class="font-bold text-lg text-gray-900">문서 제목</h3>
-                <button onclick="closeDocument()" class="p-1 bg-gray-100 rounded-full text-gray-500 active:scale-90 transition">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
-            </div>
-            <div id="modal-content" class="text-sm text-gray-600 leading-relaxed max-h-[60vh] overflow-y-auto hide-scrollbar">
-                문서 내용이 들어갑니다.
-            </div>
-        </div>
-    </div>
-
-    <footer class="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 py-3 px-4 shadow-[0_-4px_10px_rgba(0,0,0,0.03)]">
-        <div class="max-w-md mx-auto flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-gradient-to-tr from-yellow-400 to-amber-500 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-inner shadow-black/10">
-                    WM
-                </div>
-                <div>
-                    <div class="flex items-center gap-1.5">
-                        <span class="font-bold text-sm text-gray-800">김광익</span>
-                        <span class="text-[10px] bg-yellow-100 text-yellow-800 px-1.5 py-0.5 rounded font-medium">KB Wealth Manager</span>
+    <footer class="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-100 py-3 px-4 shadow-[0_-5px_15px_rgba(0,0,0,0.04)]">
+        <div class="max-w-md mx-auto flex flex-col gap-2.5">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 bg-gradient-to-tr from-amber-400 to-amber-500 rounded-full flex items-center justify-center text-white font-extrabold text-xs shadow-inner">
+                        WM
                     </div>
-                    <p class="text-xs text-gray-400 mt-0.5">자산관리·절세·보험 전문 상담</p>
+                    <div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="font-extrabold text-xs text-gray-800">김광익</span>
+                            <span class="text-[9px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded font-bold">KB Wealth Manager</span>
+                        </div>
+                        <p class="text-[10px] text-gray-400 mt-0.5">자산관리·절세·상속세 전문 파트너</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <p class="text-[9px] font-bold text-gray-400">실시간 직통 라인</p>
+                    <p class="text-xs font-black text-gray-700 tracking-tight">010-7688-3374</p>
                 </div>
             </div>
-            <a href="tel:010-7688-3374" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-4 py-2.5 rounded-xl text-xs flex items-center gap-1.5 shadow-sm active:scale-95 transition">
-                <i data-lucide="phone" class="w-3.5 h-3.5 fill-gray-900"></i>상담 연결
-            </a>
+            
+            <div class="flex gap-2">
+                <a href="tel:010-7688-3374" class="flex-1 bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition">
+                    <i data-lucide="phone" class="w-3.5 h-3.5 fill-white"></i>실시간 전화 상담
+                </a>
+                <a href="sms:010-7688-3374" class="flex-1 bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold py-3 rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98] transition">
+                    <i data-lucide="message-square" class="w-3.5 h-3.5 fill-slate-900"></i>문자 상담 접수
+                </a>
+            </div>
         </div>
     </footer>
 
     <script>
-        // Lucide 아이콘 초기 렌더링
+        // 초기 아이콘 세팅 자산 로드
         lucide.createIcons();
 
-        // 탭 전환 기능
+        // 싱글 페이지 탭 상태 전이 함수
         function switchTab(tabId) {
-            const tabs = ['all', 'calc', 'core', 'qna'];
+            const tabs = ['all', 'calc', 'core', 'qna', 'cases'];
             tabs.forEach(t => {
                 document.getElementById(`tab-${t}`).classList.remove('active');
                 const btn = document.getElementById(`tab-btn-${t}`);
                 if (btn) {
-                    btn.classList.remove('text-yellow-600', 'border-b-2', 'border-yellow-500', 'font-semibold');
-                    btn.classList.add('text-gray-500');
+                    btn.classList.remove('text-amber-500', 'border-b-2', 'border-amber-500');
+                    btn.classList.add('text-gray-400');
                 }
             });
 
             document.getElementById(`tab-${tabId}`).classList.add('active');
             const activeBtn = document.getElementById(`tab-btn-${tabId}`);
             if (activeBtn) {
-                activeBtn.classList.remove('text-gray-500');
-                activeBtn.classList.add('text-yellow-600', 'border-b-2', 'border-yellow-500', 'font-semibold');
+                activeBtn.classList.remove('text-gray-400');
+                activeBtn.classList.add('text-amber-500', 'border-b-2', 'border-amber-500');
             }
             window.scrollTo(0, 0);
         }
 
-        // 증여세 간단 시뮬레이션 로직
-        function calculateTax() {
-            const amountInput = document.getElementById('calc-input').value;
-            if(!amountInput || amountInput <= 50000000) {
-                alert("5,000만 원 초과 금액을 입력해 주세요. (성인 자녀 기본공제 한도)");
+        // 세무 시뮬레이터 연산 엔진
+        function runTaxEngine() {
+            const val = document.getElementById('calc-input-main').value;
+            if(!val || val <= 50000000) {
+                alert("성인 자녀 기본공제 한도액인 5,000만 원을 초과하는 가액을 정확히 입력해 주세요.");
                 return;
             }
             
-            const overAmount = amountInput - 50000000;
-            let calculatedTax = 0;
+            const baseAmount = val - 50000000;
+            let taxResult = 0;
+            let rateText = "";
 
-            if (overAmount <= 100000000) {
-                calculatedTax = overAmount * 0.1;
-            } else if (overAmount <= 500000000) {
-                calculatedTax = overAmount * 0.2 - 10000000;
+            if (baseAmount <= 100000000) {
+                taxResult = baseAmount * 0.1;
+                rateText = "10% (1억 이하)";
+            } else if (baseAmount <= 500000000) {
+                taxResult = baseAmount * 0.2 - 10000000;
+                rateText = "20% (5억 이하 누진공제)";
             } else {
-                calculatedTax = overAmount * 0.3 - 60000000;
+                taxResult = baseAmount * 0.3 - 60000000;
+                rateText = "30% (5억 초과 과세)";
             }
 
-            document.getElementById('res-base').innerText = overAmount.toLocaleString() + " 원";
-            document.getElementById('res-tax').innerText = calculatedTax.toLocaleString() + " 원";
-            document.getElementById('calc-result').classList.remove('hidden');
+            document.getElementById('txt-base').innerText = baseAmount.toLocaleString() + " 원";
+            document.getElementById('txt-rate').innerText = rateText;
+            document.getElementById('txt-total-tax').innerText = taxResult.toLocaleString() + " 원";
+            document.getElementById('calc-result-box').classList.remove('hidden');
         }
 
-        // 아코디언 UI 토글 토글 함수
-        function toggleAccordion(id) {
+        // 아코디언 토글 제어 컴포넌트
+        function toggleBox(id) {
             const content = document.getElementById(`ans-${id}`);
-            const icon = document.getElementById(`icon-${id}`);
+            const icon = document.getElementById(`ico-${id}`);
             if(content.classList.contains('hidden')) {
                 content.classList.remove('hidden');
                 icon.style.transform = 'rotate(180deg)';
@@ -236,28 +292,6 @@
                 content.classList.add('hidden');
                 icon.style.transform = 'rotate(0deg)';
             }
-        }
-
-        // 모달창 제어 로직
-        function openDocument(title, text) {
-            document.getElementById('modal-title').innerText = title;
-            document.getElementById('modal-content').innerText = text;
-            
-            const modal = document.getElementById('doc-modal');
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                modal.querySelector('div').classList.remove('translate-y-full');
-            }, 50);
-        }
-
-        function closeDocument() {
-            const modal = document.getElementById('doc-modal');
-            modal.classList.add('opacity-0');
-            modal.querySelector('div').classList.add('translate-y-full');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 300);
         }
     </script>
 </body>
